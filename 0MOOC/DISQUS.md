@@ -23,7 +23,9 @@
 + gitbook webpage
 
 ## 使用
-+ 
++ [查看页面](https://wwshen.gitbooks.io/omooc2py/content/)
+
+正文下方出现评论框，登录discus后即可评论。
 
 ## 体验
 
