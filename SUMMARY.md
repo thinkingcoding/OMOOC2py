@@ -5,7 +5,7 @@
  - [CLI](CLI.md)
  - [git](git.md)
  - [github](github.md)
- - [md](md.md)
+ - [Markdown私人教程](md.md)
  - [py](py.md)
  - [reverse](reverse.md)
 - [基础旋进](1sTry/README.md)
