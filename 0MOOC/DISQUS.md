@@ -1,8 +1,7 @@
 # DISQUS 私人教程
 
 ## 背景
-+ win XP/win 8.1
-+ gitbook webpage
++ Disqus, 读作 "discuss", 是常用的网页评论和讨论工具.博主可以通过注册和设置disqus开通评论，并及时收到消息的邮件提醒。
 
 ## 安装
 + 点击 more下拉菜单（倒三角图标）-> find plugin
@@ -20,8 +19,11 @@
         }
 
 ## 配置
++ win XP/win 8.1
++ gitbook webpage
 
 ## 使用
++ 
 
 ## 体验
 
