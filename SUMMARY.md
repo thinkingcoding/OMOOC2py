@@ -3,7 +3,7 @@
 - [教学反转](0MOOC/README.md)
  - [disqus私人教程](DISQUS.md)
  - [CLI](CLI.md)
- - [git](git.md)
+ - [git私人教程](git.md)
  - [github](github.md)
  - [Markdown私人教程](md.md)
  - [py](py.md)
