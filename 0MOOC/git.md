@@ -26,7 +26,7 @@
         $ git config --global user.email mymail@mailbox.com
  + 设定编辑器
         $ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession"
-   + 注意Program Files和(x86)之间有一个空格！因为没有发现空格，我在后来的commit操作中失败了无数次。
+   + *注意Program Files和(x86)之间有一个空格！*
    + git documentation上这么说：You may find, if you don’t setup an editor like this, you will likely get into a really confusing state when they are launched. Such example on a Windows system may include a prematurely terminated Git operation during a Git initiated edit.
 
  + 建立本地仓库
@@ -41,45 +41,46 @@
 		$ git init myrepo
    + myrepo位于c/documents and settings/xxx(username)
    + 此命令也用于新建本地仓库
-+ 检查文件状态
-  + git中有几个重要文件状态：
-    + untracked：位于你的工作文件夹中的文档，并未被递交到git的仓库中。它虽然在那里，但是无人知晓，无人问津。untracked的文件就好象一个班级里的旁听生，点名册里面没有他。
-    + tracked：好消息，名字被加在点名册里面了。
-    + staged：考察状态。考察的可以是untracked的旁听生，也可以是正式学生。旁听生added后，在staged状态下，可以决定是否commit到正式点名册。而正式学生在modified以后，也成了一个全新的学生，此时它stage到你面前，由你决定是否把新的他commit到点名册中（如果不commit，则点名册中的它还是unmodified的旧它）。
-    + modified：这个文件来到了老师（你）面前，然后老师精心调教了一番，这时候它发生了翻天覆地（或极其不明显）的变化。这个状态是modified。每次modify结束后，这个文件就不是原来的文件了——因为我们不能用老眼光看人。因此这个“新它”就需要重新评估，这时它是tracked，但是unstaged，也是uncommited（同时点名册里还有一个已经staged，unmodified的旧它）。
-    + 具体图示如下。真正了解这些概念，还需自己现在就开始实践操作。
+ + 检查文件状态
+   + git中有几个重要文件状态：
+     + untracked：位于你的工作文件夹中的文档，并未被递交到git的仓库中。它虽然在那里，但是无人知晓，无人问津。untracked的文件就好象一个班级里的旁听生，点名册里面没有他。
+     + tracked：好消息，名字被加在点名册里面了。
+     + staged：考察状态。考察的可以是untracked的旁听生，也可以是正式学生。旁听生added后，在staged状态下，可以决定是否commit到正式点名册。而正式学生在modified以后，也成了一个全新的学生，此时它stage到你面前，由你决定是否把新的他commit到点名册中（如果不commit，则点名册中的它还是unmodified的旧它）。
+     + modified：这个文件来到了老师（你）面前，然后老师精心调教了一番，这时候它发生了翻天覆地（或极其不明显）的变化。这个状态是modified。每次modify结束后，这个文件就不是原来的文件了——因为我们不能用老眼光看人。因此这个“新它”就需要重新评估，这时它是tracked，但是unstaged，也是uncommited（同时点名册里还有一个已经staged，unmodified的旧它）。
+     + 具体图示如下。真正了解这些概念，还需自己现在就开始实践操作。
 ![the lifecycle of the status of your files](https://git-scm.com/book/en/v2/book/02-git-basics/images/lifecycle.png)
-  + xp中检查状态
+   + xp中检查状态
 		$ git status（或$ git status -s 或$ git status --short）
-    + 这一命令把我位于c/documents and settings/xxx（即working directory）的所有文件都扫了出来，并将它们了列为untracked。
-  + win8中检查状态
-    + 直接输入上述错误导致错误提示：fatal: Not a git repository (or any of the parent directories): .git
-    + 此句是提示我目前不在正确的目录下（我在c:/documents and settings/xxx，正确的目录是c:/documents and settings/xxx/myrepo）
-    + 更改为
+     + 这一命令把我位于c/documents and settings/xxx（即working directory）的所有文件都扫了出来，并将它们了列为untracked。
+   + win8中检查状态
+     + 直接输入上述错误导致错误提示：fatal: Not a git repository (or any of the parent directories): .git
+     + 此句是提示我目前不在正确的目录下（我在c:/documents and settings/xxx，正确的目录是c:/documents and settings/xxx/myrepo）
+     + 更改为
 			$ cd myrepo
 			$ git status
 
-
-1. 创建untracked的新文件并练习各个状态
-  + 找到工作文件夹，手动加一个文件test.txt, $ git status 提示文件为untracked
-  + 将文件test.txt加入
++ 更改各个状态
+ 1. 创建untracked的新文件并练习各个状态
+   + 找到工作文件夹，手动加一个文件test.txt, $ git status 提示文件为untracked
+   + 将文件test.txt加入
 		$ git add test.txt
 		$ git status 
-     + 现在，test.txt处于staged状态
-  + modified
-    + 修改test.txt，随后再次查看$ git status，显示test.txt位于modified, unstaged（旧的test.txt仍处于staged的状态）
-    + 再次使用$ git add使其进入staged的状态
-	+ 将test.txt加入tracked
+      + 现在，test.txt处于staged状态
+   + modified
+      + 修改test.txt，随后再次查看$ git status，显示test.txt位于modified, unstaged（旧的test.txt仍处于staged的状态）
+      + 再次使用$ git add使其进入staged的状态
+ 	  + 将test.txt加入tracked
         $ git commit test.txt		
-2. 修改tracked文件并commit
-        $ echo here is a test from git bash >>myrepo/w1/README.md 
-        $ git add w1/README.md
-        $ git commit w1/README.md
-  + 跳出Notepad++，提示“Please enter the commit message for your changes.”添加文字：this is a test for git commit and notepad++，保存并关闭。
-  + 提示1 file changed, 1 insertion(+)
-  + 此外有一个warning：[LF will be replaced by CRLF](http://stackoverflow.com/questions/17628305/windows-git-warning-lf-will-be-replaced-by-crlf-is-that-warning-tail-backwar) ([also see](http://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf)) in w1/README.md
- 
-
+ 2. 修改tracked文件并commit
+            $ echo here is a test from git bash >>myrepo/w1/README.md 
+            $ git add w1/README.md
+            $ git commit w1/README.md
+   + Notepad++跳出，提示“Please enter the commit message for your changes.”添加文字：this is a test for git commit and notepad++，保存并关闭。
+   + 提示1 file changed, 1 insertion(+)
+   + 此外有一个warning：[LF will be replaced by CRLF](http://stackoverflow.com/questions/17628305/windows-git-warning-lf-will-be-replaced-by-crlf-is-that-warning-tail-backwar) ([also see](http://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf)) in w1/README.md
+ 3. 从本地仓库中去除文件
+   + 从git中去除文件的做法是先从staging区域去除文件（git rm），然后commit。使用命令git rm，不仅将文件去除了git的关联，也从工作文件夹中删除了该文件。
+   + 练习。
 ## 体验
 
 
