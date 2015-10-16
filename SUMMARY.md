@@ -8,7 +8,7 @@
  - [Markdown私人教程](0MOOC/md.md)
  - [py](0MOOC/py.md)
  - [reverse](0MOOC/reverse.md)
- - [网课2](0MOOC/Lectue2.md)
+ - [网课2](0MOOC/Lecture2.md)
 - [基础旋进](1sTry/README.md)
 - [迭代作品](2nDev/README.md)
 - [人生首秀](3rDemo/README.md)
