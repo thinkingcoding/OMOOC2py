@@ -59,6 +59,7 @@
 			$ cd myrepo
 			$ git status
 
+
 1. 创建untracked的新文件并练习各个状态
   + 找到工作文件夹，手动加一个文件test.txt, $ git status 提示文件为untracked
   + 将文件test.txt加入
@@ -70,16 +71,18 @@
     + 再次使用$ git add使其进入staged的状态
 	+ 将test.txt加入tracked
         $ git commit test.txt		
-
-
 2. 修改tracked文件并commit
         $ echo here is a test from git bash >>myrepo/w1/README.md 
         $ git add w1/README.md
         $ git commit w1/README.md
   + 跳出Notepad++，提示“Please enter the commit message for your changes.”添加文字：this is a test for git commit and notepad++，保存并关闭。
   + 提示1 file changed, 1 insertion(+)
-  + 此外有一个warning：LF will be replaced by CRLF in w1/README.md
-- 
+  + 此外有一个warning：[LF will be replaced by CRLF](http://stackoverflow.com/questions/17628305/windows-git-warning-lf-will-be-replaced-by-crlf-is-that-warning-tail-backwar) ([also see](http://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf)) in w1/README.md
+ 
 
 ## 体验
+
+## 更新
++ 2015-10-15 创建并从[原记录](https://www.gitbook.com/book/wwshen/ommooc2python)迁出/
++ 2015-10-16 修改表述。原教程偏重记录学习过程，现将教程逐步改为面向读者。
 
