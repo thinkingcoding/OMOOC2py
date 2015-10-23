@@ -10,7 +10,7 @@
  - [reverse](0MOOC/reverse.md)
  - [网课1](0MOOC/Lecture2.md)
 - [基础旋进](1sTry/README.md)
- - 网课2 （1stTry/Lecture3.md）
+ - [网课2](1stTry/Lecture3.md)
 - [迭代作品](2nDev/README.md)
 - [人生首秀](3rDemo/README.md)
 - [代码 (_src)](_src/README.md)
