@@ -4,6 +4,7 @@
  - [disqus私人教程](0MOOC/DISQUS.md)
  - [CLI](0MOOC/CLI.md)
  - [git私人教程](0MOOC/git.md)
+   - [实现gitbook与github双推](0MOOC/doublepush.md)
  - [github](0MOOC/github.md)
  - [Markdown私人教程](0MOOC/md.md)
  - [py](0MOOC/py.md)
