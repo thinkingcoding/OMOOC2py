@@ -28,7 +28,8 @@
   - keep calm and try dir()/help()/ipython
   - PyENV
 - 如何完成1w任务
-  -** .pyc?**
+  - ** .pyc?**
+    - 是由py文件经过编译后生成的二进制文件
   - 技术
     - raw_input() 从外界输入
 	- **while + break** 保持交互 + 退出
@@ -58,13 +59,39 @@
 	    #全局变量
 	    #函数撰写区
 	    #自检区
+  - "#!usr/bin/env python"是什么，见[[1](http://stackoverflow.com/questions/2429511/why-do-people-write-usr-bin-env-python-on-the-first-line-of-a-python-script)][[2](http://blog.csdn.net/wh_19910525/article/details/8040494)]		
   - **pythonic... The Zen of python  八荣八耻...**
+		Beautiful is better than ugly.
+		Explicit is better than implicit.
+		Simple is better than complex.
+		Complex is better than complicated.
+		Flat is better than nested.
+		Spase is better than dense.
+		Readability counts.
+		Special cases aren't special enough to break the rules.
+		Although practicality beats purity.
+		Errors should never pass silently.
+		Unless explicitly silenced.
+		In the face of ambiguity, refuse the temptation to guess.
+		There should be one -- and peferably only one -- obvious way to do it.
+		Althoughh that way may not be obvious at first unless you're Dutch.
+		Now is better than never.
+		Although never is often better than *right* now.
+		If the implementation is hard to explain, it's a bad idea.
+		If the implementation is easy to explain, it may be a good idea.
+		Namespaces are one honking great idea -- lt's do more of those!
+    - http://blog.csdn.net/gzlaiyonghao/article/details/2151918		
+		 
 - 2w任务
   - 引入了GUI
-    - 桌面应用**Tk**inter  
-	  - Tk 小 & 工业-实时控制
+    - 桌面应用Tkinter 见[[1](https://wiki.python.org/moin/TkInter)] [[2](https://docs.python.org/2/library/tkinter.html)]
+	  - Tk 小 & 工业-实时控制 http://www.tcl.tk/software/tcltk/
 	- check芝麻星
 - ps
   - win党
     - 配好路径...
-	- **use SSH for github**    **putty（自由软件）** putty.org (国内的注毒)
+	- **use SSH for github**    
+	- **[putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/)（自由软件）** putty.org (国内的注毒)
+	  - A Free Telnet/SSH Client
+	  - PuTTY是一个Telnet、SSH、rlogin、纯TCP以及串行接口连接软件。较早的版本仅支持Windows平台，在最近的版本中开始支持各类Unix平台，并打算移植至Mac OS X上。除了官方版本外，有许多第三方的团体或个人将PuTTY移植到其他平台上，像是以Symbian为基础的移动电话。
+	  - [中文教程](http://chaifeng.com/blog/2007/06/putty_200611.html)
