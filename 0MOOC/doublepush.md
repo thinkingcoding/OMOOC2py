@@ -82,5 +82,4 @@
 		url = git@github.com:OpenMindClub/[图书名].git
 		fetch = +refs/heads/*:refs/remotes/origin/*
   - 然后默认推送（git push）		
-  - 因手贱，有时候喜欢在gitbook网页上更改格式。尚不清楚这样更改后再pull下来时是否会有问题。
-  
+  - 这种设置下最好不要在网页版gitbook递交更改，否则无法拉下gitbook网页上的更改。
