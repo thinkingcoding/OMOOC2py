@@ -76,11 +76,11 @@
   - 然后推送
 			git push book master
 			git push origin master
-- 自动双推
+- 自动双推，将上述行更改为：
 		[remote "origin"]
 		url = https://[用户名]:[口令]@git.gitbook.com/[帐号]/[图书名].git
 		url = git@github.com:OpenMindClub/[图书名].git
 		fetch = +refs/heads/*:refs/remotes/origin/*
-  - 然后推送（git push origin master）		
-  - 尚未尝试自动双推。因手贱，有时候喜欢在gitbook网页上更改格式。不知道这样更改后再pull下来时是否会有问题。
+  - 然后默认推送（git push）		
+  - 因手贱，有时候喜欢在gitbook网页上更改格式。尚不清楚这样更改后再pull下来时是否会有问题。
   
