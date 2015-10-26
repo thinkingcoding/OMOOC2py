@@ -43,14 +43,19 @@
 		fetch = +refs/heads/*:refs/remotes/origin/*
 - 将其增改为
 		[remote "book"]
-		url = https://git.gitbook.com/wwshen/omooc2py.git
-		fetch = +refs/heads/*:refs/remotes/origin/*
-	[remote "hub"]
-		url = git@github.com:wwshen/OMOOC2py.git
-		fetch = +refs/heads/*:refs/remotes/origin/*
-	[remote "origin"]
-		url = git@github.com:wwshen/OMOOC2py.git
-		fetch = +refs/heads/*:refs/remotes/origin/*
+			url = https://git.gitbook.com/wwshen/omooc2py.git
+			fetch = +refs/heads/*:refs/remotes/origin/*
+		[remote "hub"]
+			url = git@github.com:wwshen/OMOOC2py.git
+			fetch = +refs/heads/*:refs/remotes/origin/*
+		[remote "origin"]
+			url = https://github.com/wwshen/OMOOC2py
+			fetch = +refs/heads/*:refs/remotes/origin/*
+  - 本人的github显示http链接，而非SSH。尝试改成	“git@github.com:wwshen/OMOOC2py.git”发现并不能提交，显示错误：
+			Permission denied (publickey).fatal: Could not read from remote repository.
+			Please make sure you have the correct access rights and the repository exists.
+    - 尚未深究原因
+  - 设置hub项的意义我觉得模棱两可，将hub项去掉，亦可直接推送book和origin分别到两个网站	
 - 回到仓库根目录，测试
 		$ git remote -v
 		显示如下：
@@ -58,16 +63,24 @@
 		book    https://git.gitbook.com/wwshen/omooc2py.git (fetch)
 		hub git@github.com:wwshen/OMOOC2py.git (push)
 		hub git@github.com:wwshen/OMOOC2py.git (fetch)
-		origin  git@github.com:wwshen/OMOOC2py.git (push)
-		origin  git@github.com:wwshen/OMOOC2py.git (fetch)
+		origin  https://github.com/wwshen/OMOOC2py (push)
+		origin  https://github.com/wwshen/OMOOC2py (fetch)
 - 配置明文口令，以便不用输入用户名密码，即将以上remote book中的内容改为
 		[remote "book"]
 		url = https://wwshen:[我的密码]@git.gitbook.com/wwshen/omooc2py.git
 		fetch = +refs/heads/*:refs/remotes/origin/*
+  - github同理		
 - 同步与双推
   - 因为本人的gitbook已经有不少内容，而且并未同步到本地，因此第一步是将gitbook的更新拉回本地
 			git pull book master
   - 然后推送
 			git push book master
 			git push origin master
-		
+- 自动双推
+		[remote "origin"]
+		url = https://[用户名]:[口令]@git.gitbook.com/[帐号]/[图书名].git
+		url = git@github.com:OpenMindClub/[图书名].git
+		fetch = +refs/heads/*:refs/remotes/origin/*
+  - 然后推送（git push origin master）		
+  - 尚未尝试自动双推。因手贱，有时候喜欢在gitbook网页上更改格式。不知道这样更改后再pull下来时是否会有问题。
+  
