@@ -25,22 +25,21 @@
 
 - 尝试
   0. 建立架构, 并凭自己的直觉，输入一些命令（参考[LPTHW](http://learnpythonthehardway.org/book/)）
-		# -*- coding: utf-8 -*-
-		# 一个极简交互式日记系统，作用如下：
-		# 一次接收输入一行日记
-		# 保存为本地文件
-		# 再次运行系统时，打印出过往的所有日记
+	    	# -*- coding: utf-8 -*-
+	    	# 一个极简交互式日记系统，作用如下：
+	    	# 一次接收输入一行日记
+	    	# 保存为本地文件
+	    	# 再次运行系统时，打印出过往的所有日记
 
+		    # determine if the file has existed.
 
-		# determine if the file has existed.
+    		#Print the file, or create a file
 
-		#Print the file, or create a file
+	    	# enter from the user
 
-		# enter from the user
+		    # reading the newline and add into the old
 
-		# reading the newline and add into the old
-
-		# save
+		    # save
   1. 如何确定文档是否存在？
     - google: use python find/search file (in a directory)
 	- 根据google的结果在官方文档查找相关的function，如os，os.path，fnmatch等等
@@ -66,14 +65,14 @@
 		WDir = os.getcwd()
 		fn = 'simpleblog.txt'
 
-		# determine if the file has existed.
-		index = 0
-		for root, dirs, files in os.walk(WDir):
-			for name in files:
-				if name == fn:
-					index = index + 1
-				else:
-					index = index + 0
+	    	# determine if the file has existed.
+		    index = 0
+		    for root, dirs, files in os.walk(WDir):
+			    for name in files:
+				    if name == fn:
+					    index = index + 1
+				    else:
+					    index = index + 0
   2. 如何读取文件内容？
     - 根据LPTHW，用open语句，查看官方文档open的参数说明，看不懂——就试错
   3. 如何创建新文档？
