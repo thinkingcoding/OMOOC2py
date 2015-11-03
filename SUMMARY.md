@@ -15,6 +15,8 @@
  - [网课2](1sTry/Lecture3.md)
  - [作业simpleblog beta1编写日志](1sTry/w0ex1.md)
 - [迭代作品](2nDev/README.md)
+  - [作业simplelog beta2.0人机界面版 编写日志](2nDev/simplelog.MD)
+  - [作业simplelog beta2.0人机界面版 代码](_src/om2py2w/2wex0/simplelog.py)
 - [人生首秀](3rDemo/README.md)
 - [代码 (_src)](_src/README.md)
 - [素材 (draft)](draft/README.md)
