@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#!usr/bin/env python
+#!/usr/bin/env python
 '''文件说明
 一个极简交互式日记系统，作用如下：
 一次接收输入一行日记
