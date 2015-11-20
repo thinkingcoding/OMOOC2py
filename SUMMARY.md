@@ -9,6 +9,7 @@
  - [github](0MOOC/github.md)
  - [Markdown私人教程](0MOOC/md.md)
  - [py](0MOOC/py.md)
+  - [pip安装错误](0MOOC/pip error.md)
  - [reverse](0MOOC/reverse.md)
 
 - [基础旋进](1sTry/README.md)
@@ -21,8 +22,9 @@
  - [W4D3]
 - [迭代作品](2nDev/README.md)
   - [第一周作业simpleblog beta1.0 单机CLI版 编写日志](1sTry/w0ex1.md)
-  - [第二周作业simplelog beta2.0人机界面版 编写日志](2nDev/simplelog.md)
+  - [第二周作业simplelog beta2.0人机界面版 编写日志](2nDev/w2ex0.md)
   - [第三周作业simplelog beta3.0联机CLI版 编写日志](2nDev/w3ex0.md)
+  - [第四周作业SL3.py网页版 编写日志](2nDev/w4ex0.md)
 - [人生首秀](3rDemo/README.md)
 - [代码 (_src)](_src/README.md)
 - [素材 (draft)](draft/README.md)

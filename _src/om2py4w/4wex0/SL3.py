@@ -89,9 +89,6 @@ def do_newuser():
 	uc = userdata.cursor()
 	uc.execute("SELECT userid FROM users")
 	alluser = uc.fetchall()
-	print alluser
-	print username
-	print checkdup(alluser, username)
 	if checkdup(alluser, username):
 		return template('reg', information='该用户名已存在！')
 	elif password == confirm:
@@ -132,16 +129,6 @@ def allstory(user='游客'):
 	cc.execute("SELECT title, main FROM chains WHERE ct=?", (0,))
 	ALL = cc.fetchall()
 	conn.commit()
-	#ALLnew = []
-	#cnt=0
-	#for i in ALL:
-	#	I = list(i)
-	#	TITLE = I[0]
-	#	url = "<a href='/"+TITLE+"'>Enter</a>"
-	#	I.insert(2,url)
-	#	i = tuple(I)
-	#	ALLnew.insert(cnt,i)
-	#	cnt += 1
 	output = template('allstory', userid=user, rows = ALL, information='')
 	if request.GET.get('save'):
 		newtitle = unicode(request.GET.get('title'))
