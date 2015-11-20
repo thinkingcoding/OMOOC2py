@@ -10,13 +10,19 @@
  - [Markdown私人教程](0MOOC/md.md)
  - [py](0MOOC/py.md)
  - [reverse](0MOOC/reverse.md)
- - [网课1](0MOOC/Lecture2.md)
+
 - [基础旋进](1sTry/README.md)
- - [网课2](1sTry/Lecture3.md)
- - [作业simpleblog beta1编写日志](1sTry/w0ex1.md)
+
+- [视频课程](lectures/README.md)
+ - [W0D6]
+ - [W1D3](0MOOC/Lecture2.md)
+ - [W2D3](1sTry/Lecture3.md)
+ - [W3D3]
+ - [W4D3]
 - [迭代作品](2nDev/README.md)
-  - [作业simplelog beta2.0人机界面版 编写日志](2nDev/simplelog.md)
-  - [作业simplelog beta2.0人机界面版 代码](_src/om2py2w/2wex0/simplelog.py)
+  - [第一周作业simpleblog beta1.0 单机CLI版 编写日志](1sTry/w0ex1.md)
+  - [第二周作业simplelog beta2.0人机界面版 编写日志](2nDev/simplelog.md)
+  - [第三周作业simplelog beta3.0联机CLI版 编写日志](2nDev/w3ex0.md)
 - [人生首秀](3rDemo/README.md)
 - [代码 (_src)](_src/README.md)
 - [素材 (draft)](draft/README.md)

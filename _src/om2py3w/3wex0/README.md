@@ -1,4 +1,4 @@
-网络版simplelog
+联机版simplelog
 分为sever.py（服务器程序）和client.py(客户端程序)。
 打开客户端程序（在服务器程序开放时），可查看所有文档，并输入新文档。
 新文档保存在服务器程序同目录下的simplelog.txt
