@@ -1,4 +1,13 @@
 - 一个故事接龙的网站
+- 包括：
+       _src/om2py4w/4wex0/SL3.py
+       _src/om2py4w/4wex0/allstory.tpl
+       _src/om2py4w/4wex0/createstorydata.py
+       _src/om2py4w/4wex0/createuserdata.py
+       _src/om2py4w/4wex0/login.tpl
+       _src/om2py4w/4wex0/make_table.tpl
+       _src/om2py4w/4wex0/reg.tpl
+
 - 功能
   - 注册
   - 登录：为主界面
