@@ -5,6 +5,7 @@
  - [CLI](0MOOC/CLI.md)
  - [git私人教程](0MOOC/git.md)
    - [实现gitbook与github双推](0MOOC/doublepush.md)
+   - [在gitbook Markdown文档中使用双大括号](0MOOC/dakuohao.md)
    - [用SSH替代Https](0MOOC/SSH.md)
  - [github](0MOOC/github.md)
  - [Markdown私人教程](0MOOC/md.md)
