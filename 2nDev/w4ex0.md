@@ -82,7 +82,7 @@
 		output = template('make_table', rows = result)#需要import bottle中的template
 		return output
     - ‘make_table'是我们另外制作的模板文件，文件名为make_table.tpl，同样保存于工作文件夹
-	- 'make_table'的内容如下，%左边是python语句，需要显示的变量在{{}}中
+	- 'make_table'的内容如下，%左边是python语句，需要显示的变量在{% raw %}{{}}{% endraw %}中
 		%#template to generate a HTML table from a list of tuples (or list of lists, or tuple of tuples or ...)
 		<p>这个故事是这样的:</p>
 		<table border="1">
