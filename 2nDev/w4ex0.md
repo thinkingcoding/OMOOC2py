@@ -85,17 +85,17 @@
 		return output
     - ‘make_table'是我们另外制作的模板文件，文件名为make_table.tpl，同样保存于工作文件夹
 	- 'make_table'的内容如下，%左边是python语句，需要显示的变量在{% raw %}{{}}{% endraw %}中
-		{% raw %}%#template to generate a HTML table from a list of tuples (or list of lists, or tuple of tuples or ...)
-		<p>这个故事是这样的:</p>
-		<table border="1">
-		%for row in rows:
-			<tr>
-			%for col in row:
-				<td>{% raw %}{{col}}{% endraw %}</td>
-			%end
-			</tr>
-		%end
-		</table>{% endraw %}
+		{% raw %}%#template to generate a HTML table from a list of tuples (or list of lists, or tuple of tuples or ...){% endrow %}
+		{% raw %}%<p>这个故事是这样的:</p>{% endraw %}
+		{% raw %}%<table border="1">{% endraw %}
+		{% raw %}%for row in rows:{% endraw %}
+		{% raw %}	<tr>{% endraw %}
+		{% raw %}	%for col in row:{% endraw %}
+		{% raw %}		<td>{{col}}</td>{% endraw %}
+		{% raw %}	%end{% endraw %}
+		{% raw %}	</tr>{% endraw %}
+		{% raw %}%end{% endraw %}
+		{% raw %}</table>{% endraw %}
   - 第四步，准备输入界面
     - 直接在make_table中加上下面几句：
 		{% raw %}<p>请你把故事接下去:</p>
@@ -148,24 +148,24 @@
 			ALLnew.insert(cnt,i)
 			cnt += 1
   - 因此，直接将url体现在了模板中
-		<b>浏览故事</b><p></p>
-		%for row in rows:
-			<b>{% raw %}{{row[0]}}{% endraw %}:</b> 
-			{{row[1]}}  ...
-			<a href='/storychain/{% raw %}{{row[0]}}{% endraw %}'>进入</a>
-			<p></p>
-		%end
+		{% raw %}<b>浏览故事</b><p></p>{% endraw %}
+		{% raw %}%for row in rows:{% endraw %}
+		{% raw %}	<b>{{row[0]}}:</b> {% endraw %}
+		{% raw %}	{{row[1]}}  ...{% endraw %}
+		{% raw %}	<a href='/storychain/{{row[0]}}'>进入</a>{% endraw %}
+		{% raw %}	<p></p>{% endraw %}
+		{% raw %}%end{% endraw %}
     - 第三行row[0]为rows队列row tuple的第一个元素，即标题
 	- 第四行row[1]为rows队列row tuple的第二个元素，即首行
 	- 第五行将ow[0]转化成url
 	- 第六行为换行
   - 第四步，准备输入
     - 在模板中写入
-		{% raw %}<p>开始一个新故事:</p>
-		<form action='/storychain' method='GET'>
-			<input name='title' type='text' size = '20' maxlength='40'/>
-		<input value = '创建' name = 'save' type = 'submit'/>
-		</form>	{% endraw %}
+		{% raw %}<p>开始一个新故事:</p>{% endraw %}
+		{% raw %}<form action='/storychain' method='GET'>{% endraw %}
+		{% raw %}	<input name='title' type='text' size = '20' maxlength='40'/>{% endraw %}
+		{% raw %}<input value = '创建' name = 'save' type = 'submit'/>{% endraw %}
+		{% raw %}</form>	{% endraw %}
     - 在def allstory()写入
 		if request.GET.get('save'):
 		newtitle = request.GET.get('title')#用户输入标题
@@ -211,13 +211,13 @@
 			else:
 				return template('reg', information='请确保两次输入的密码相同！')  
   - 模板reg.tpl
-		<form action = "/newuser" method = 'post'>
-			请输入用户名: <input name = "username" type = "text"/>
-			请输入密码: <input name = "password" type = "password"/>
-			请再次输入密码：<input name = "confirm" type = "password"/>
-			<input value = "提交" type="submit"/>
-		</form>	
-		{{information}}
+		{% raw %}<form action = "/newuser" method = 'post'>{% endraw %}
+		{% raw %}	请输入用户名: <input name = "username" type = "text"/>{% endraw %}
+		{% raw %}	请输入密码: <input name = "password" type = "password"/>{% endraw %}
+		{% raw %}	请再次输入密码：<input name = "confirm" type = "password"/>{% endraw %}
+		{% raw %}	<input value = "提交" type="submit"/>{% endraw %}
+		{% raw %}</form>	{% endraw %}
+		{% raw %}{{information}}{% endraw %}
 
 - 用户登录界面
   - 主要问题有
