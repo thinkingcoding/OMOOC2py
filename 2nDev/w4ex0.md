@@ -306,11 +306,12 @@
 		response.set_cookie('acount', username, secret='somekey')
   - 读出
 		request.get_cookie('account', secret='somekey')
-  -*:需要from bottle import response, request
+  - *:需要from bottle import response, request
 
 - 解决中文输入问题
-	import sys
-	reload(sys)
-	sys.setdefaultencoding('utf8')
+
+		import sys
+		reload(sys)
+		sys.setdefaultencoding('utf8')
   - 并且，在相应的中文输入内容上加unicode(),如：
 		newtitle = unicode(request.GET.get('title'))
