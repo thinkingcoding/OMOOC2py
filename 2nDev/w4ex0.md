@@ -30,7 +30,7 @@
 		from bottle import route, run
 		@route('storychain/<name>) #动态可变的url
 		def body(name=): #定义函数，默认
-			return 'This is a story about{{name}}.'#变量显示在{{}}中
+			return 'This is a story about{% raw %}{{name}}{% endraw %}.'#变量显示在{% raw %}{{}}{% endraw %}中
 		run(host='localhost', port=8080)#()中不写同样可运行
   - 保存文件名为SL3.py到工作文件夹		
   - 在powershell中键入python SL3.py
@@ -43,7 +43,7 @@
 		debug(True)
 		@route('storychain/<name>)
 		def body(name=): 
-			return 'This is a story about{{name}}.'
+			return 'This is a story about{% raw %}{{name}}{% endraw %}.'
 		run(host='localhost', port=8080, reloader= True)
   - 引入后程序的更改（保存后）会立即被运行并体现在网页中。
 
@@ -89,7 +89,7 @@
 		%for row in rows:
 			<tr>
 			%for col in row:
-				<td>{{col}}</td>
+				<td>{% raw %}{{col}}{% endraw %}</td>
 			%end
 			</tr>
 		%end
@@ -148,9 +148,9 @@
   - 因此，直接将url体现在了模板中
 		<b>浏览故事</b><p></p>
 		%for row in rows:
-			<b>{{row[0]}}:</b> 
+			<b>{% raw %}{{row[0]}}{% endraw %}:</b> 
 			{{row[1]}}  ...
-			<a href='/storychain/{{row[0]}}'>进入</a>
+			<a href='/storychain/{% raw %}{{row[0]}}{% endraw %}'>进入</a>
 			<p></p>
 		%end
     - 第三行row[0]为rows队列row tuple的第一个元素，即标题
