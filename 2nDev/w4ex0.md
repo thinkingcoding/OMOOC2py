@@ -8,18 +8,20 @@
     - 一次接收输入一行笔记
     - 在服务端保存为文件
     - 同时兼容 3w 的 Net 版本的命令行界面进行交互
+
 ######实践
 - 觉得如果很多人来写一个笔记的话很像故事接龙
 - 出于当妈的天性，突然有点想做一个故事接龙的web
 - 设想中主要包括两个页面，一个页面显示所有故事的题目和开头；另一个页面显示一个故事的所有接龙，包括作者和写入时间。当然，还要有注册和登录的界面。
 - 照这个设想做，并没有考虑作业最后一点的内容，至今尚不知道如何兼容CLI
 - ‘参考’了几个教程，分别是bottle的tutorial和bottle的to-do list tutorial
+
 ######故事接龙网站python编写教程
 - 搭框架
   - 在纸上画出每个网页需要的内容
   - 四个网页分别为：
-    - #用户注册界面@route('/newuser')
-    - #用户登录界面@route('/')或@route('')或@route('/login')
+    - 用户注册界面@route('/newuser')
+    - 用户登录界面@route('/')或@route('')或@route('/login')
 	  - 即三个url都指向一个页面
     - 所有标题显示/输入新标题界面@route('/storychain')
     - 单个文档显示/输入新接龙界面@route('/storychain/<name>)
@@ -83,7 +85,7 @@
 		return output
     - ‘make_table'是我们另外制作的模板文件，文件名为make_table.tpl，同样保存于工作文件夹
 	- 'make_table'的内容如下，%左边是python语句，需要显示的变量在{% raw %}{{}}{% endraw %}中
-		%#template to generate a HTML table from a list of tuples (or list of lists, or tuple of tuples or ...)
+		{% raw %}%#template to generate a HTML table from a list of tuples (or list of lists, or tuple of tuples or ...)
 		<p>这个故事是这样的:</p>
 		<table border="1">
 		%for row in rows:
@@ -93,14 +95,14 @@
 			%end
 			</tr>
 		%end
-		</table>
+		</table>{% endraw %}
   - 第四步，准备输入界面
     - 直接在make_table中加上下面几句：
-		<p>请你把故事接下去:</p>
+		{% raw %}<p>请你把故事接下去:</p>
 		<form action='/storychain/{{title}}' method="GET">
 		<input type="text" size="100" maxlength="400" name="main">
 		<input type="submit" name="save" value="保存">
-		</form>
+		</form>{% raw %}
     - 在def body()相应位置写入：
 		if request.GET.get('save'):
 			new = request.GET.get('main')#接龙句
@@ -159,11 +161,11 @@
 	- 第六行为换行
   - 第四步，准备输入
     - 在模板中写入
-		<p>开始一个新故事:</p>
+		{% raw %}<p>开始一个新故事:</p>
 		<form action='/storychain' method='GET'>
 			<input name='title' type='text' size = '20' maxlength='40'/>
 		<input value = '创建' name = 'save' type = 'submit'/>
-		</form>	
+		</form>	{% endraw %}
     - 在def allstory()写入
 		if request.GET.get('save'):
 		newtitle = request.GET.get('title')#用户输入标题
