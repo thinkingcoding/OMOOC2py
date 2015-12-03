@@ -1,3 +1,5 @@
+
+
 <p>欢迎你，{{userid}}</P>
 <p>开始一个新故事:</p>
 <form action='/storychain' method='GET'>
