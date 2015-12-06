@@ -1,6 +1,6 @@
 <p>欢迎你，{{userid}}</P>
 <p>开始一个新故事:</p>
-<form action='/storychain' method='GET'>
+<form action='/index' method='GET'>
 	<input name='title' type='text' size = '20' maxlength='40'/>
 	<input value = '创建' name = 'save' type = 'submit'/>
 </form>	
@@ -10,10 +10,8 @@
 %for row in rows:
 	<b>{{row[0]}}:</b> 
 	{{row[1]}}  ...
-	<a href='/storychain/{{row[0]}}'>进入</a>
+	<a href='/{{row[0]}}'>进入</a>
 	<p></p>
 %end
-<botton action='/storychain' method='GET'>
-	<input value = '退出' name = 'exit' type = 'submit'/>
-</botton>
+
 
