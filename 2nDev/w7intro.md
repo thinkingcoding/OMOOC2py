@@ -43,7 +43,7 @@
 - 能在桌面端进行开发嘛?
 - 如何快速部署到手机上进行测试?
 - 参考
-  - Welcome to Fabric! — Fabric documentation](http://www.fabfile.org/)
+  - [Welcome to Fabric! — Fabric documentation](http://www.fabfile.org/)
   - QPython Community - Home of QPythoners
 
 ###### 移动 app. DB
@@ -51,10 +51,10 @@
 - Android 环境中都有什么数据管理形式?
 - 各有什么优点?缺点?
 - 参考
-  - 11.11. bsddb — Interface to Berkeley DB library — Python 2.7.11rc1 documentation](https://docs.python.org/2.7/library/bsddb.html)
-  - 11.13. sqlite3 — DB-API 2.0 interface for SQLite databases — Python 2.7.11rc1 documentation](https://docs.python.org/2.7/library/sqlite3.html)
-  - 11.4. shelve — Python object persistence — Python 2.7.11rc1 documentation](https://docs.python.org/2.7/library/shelve.html)
-  - 11.5. marshal — Internal Python object serialization — Python 2.7.11rc1 documentation](https://docs.python.org/2.7/library/marshal.html)
+  - [11.11. bsddb — Interface to Berkeley DB library — Python 2.7.11rc1 documentation](https://docs.python.org/2.7/library/bsddb.html)
+  - [11.13. sqlite3 — DB-API 2.0 interface for SQLite databases — Python 2.7.11rc1 documentation](https://docs.python.org/2.7/library/sqlite3.html)
+  - [11.4. shelve — Python object persistence — Python 2.7.11rc1 documentation](https://docs.python.org/2.7/library/shelve.html)
+  - [11.5. marshal — Internal Python object serialization — Python 2.7.11rc1 documentation](https://docs.python.org/2.7/library/marshal.html)
   - QPython Community - Home of QPythoners
 
 ###### 移动 app. 发行
