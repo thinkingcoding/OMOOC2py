@@ -33,7 +33,7 @@
   - [第七周作业 storychain移动app 编写日志](2nDev/w7ex0.md)
 - [人生首秀](3rDemo/README.md)
 - [实践应用](4tUse/README.md)
-  - [一个删选数据的小程序](4tUse/datascreen.md) 
+  - [一个筛选数据的小程序](4tUse/datascreen.md) 
 - [代码 (_src)](_src/README.md)
 - [素材 (draft)](draft/README.md)
   + [教程该怎么写](draft/how2tutorial.md)
