@@ -11,6 +11,8 @@
    - [在gitbook Markdown文档中使用双大括号](0MOOC/dakuohao.md)
  - [py](0MOOC/py.md)
    - [pip安装错误](0MOOC/pip error.md)
+ - [数据处理]
+   - [将csv格式数据转入mysql](0MOOC/CSVtoMYSQL.md)
  - [reverse](0MOOC/reverse.md)
 - [基础旋进](1sTry/README.md)
 - [视频课程](lectures/README.md)
